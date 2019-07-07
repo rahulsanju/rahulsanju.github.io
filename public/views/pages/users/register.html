@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="page-header">
+        <h1>Register Here</h1>
+    </div>
+    <form  name="regForm" ng-submit="register.regUser(regData)">
+
+        <div class="form-group">
+            
+            <div >
+                
+                <label for="inp" class="inp">
+                    <input type="text" id="inp" ng-model="regData.name" ng-pattern="/^[a-zA-Z]{3,20}$/" placeholder="&nbsp;">
+                    <span class="label">Name</span>
+                    <span class="border"></span>
+                </label>
+              
+                <br><br><br>
+                <label for="inp" class="inp">
+                        <input type="text" id="inp" ng-model="regData.email" placeholder="&nbsp;">
+                        <span class="label">email</span>
+                        <span class="border"></span>
+                </label>
+                <br><br><br>
+                <label for="inp" class="inp">
+                    <input type="password" id="inp" ng-model="regData.password" placeholder="&nbsp;">
+                    <span class="label">Password</span>
+                    <span class="border"></span>
+                </label>
+                <br><br><br>
+                <label for="inp" class="inp">
+                    <input type="text" id="inp" ng-model="regData.mobile" placeholder="&nbsp;">
+                    <span class="label">Mobile</span>
+                    <span class="border"></span>
+                </label>
+            </div>
+        </div>
+        <br>
+        <input type="submit"  class="btn btn-primary">
+        
+    </form>
+    <br>
+    <div class="jumbotron text-center col-sm-8" ng-show="register.loading">
+        <span class="glyphicon glyphicon-repeat spinner"></span>
+        <p>Creating User</p>
+    </div>
+    <div class="row show-hide-message col-sm-8 wow fadeIn" wow-data-duration='3s' ng-show="register.successmessage">
+        <div class="alert alert-success">{{ register.successmessage }}</div>
+    </div>
+    <div class="row show-hide-message col-sm-8 col-sm-8 wow fadeIn" wow-data-duration='3s' ng-show="register.errormessage">
+        <div class="alert alert-danger">{{register.errormessage}}</div>
+    </div>
+</div>

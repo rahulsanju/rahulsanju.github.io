@@ -1,0 +1,18 @@
+<div class="container page-header">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <h4>Hey, {{ main.user.name }}!</h4>
+        </div>
+        <div class="col-log-4 col-md-4 col-sm-4 col-xs-4" style="width:100px;height:100px;">
+            <img class="img img-responsive" src="{{ main.user.profileImage }}" >
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <button  ng-click=main.logout() class="btn btn-danger">Logout?</button>
+        </div>
+    </div>
+
+    
+</div>

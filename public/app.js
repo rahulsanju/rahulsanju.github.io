@@ -1,0 +1,1 @@
+angular.module("userApp",['appRoute','registerController','registrationServices','mainController','authenticationServices','fileModelDirective']);

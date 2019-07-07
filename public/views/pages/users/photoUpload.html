@@ -1,0 +1,75 @@
+<div class="page-header container">
+    <h1>Upload your photo</h1>
+    </div>
+
+</div>
+<div class="container">
+    <script>
+        function previewFile(){
+            var preview = document.getElementById('uploadedPhoto');
+            var file = document.getElementById('imguploader').files[0];
+            var uploadButton = document.getElementById('uploadButton');
+
+            var reader = new FileReader();
+
+            preview.style.display = "block";
+            uploadButton.style.display = "block";
+
+            reader.addEventListener('load',function(){
+                preview.src = reader.result;
+            },false);
+
+            if(file){
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+
+    <div class="row">
+        <div class="col-lg-4">
+
+        </div>
+        <div class="col-lg-4">
+            <br>
+                <label for="imguploader" class="btn btn-success">
+                    Browse
+                </label>
+                <br>
+                <br>
+                <input file-model="file.upload" type="file" name="imguploader" id="imguploader" onchange="previewFile()" style="display: none;">
+                <img src="" style="display: none;" height="200" id="uploadedPhoto" alt="Image preview...">
+                <br>
+                <button style="display: none;" id="uploadButton" ng-click="main.profilePhotoUpload()" class="btn btn-primary">Upload Photo</button>
+            
+            <!-- <input type="file"  onchange="previewFile()" id="imguploader" > -->
+        </div>
+        <div class="col-lg-4">
+            <br>
+
+            <label for="skipButton" class="btn btn-warning">
+                Skip
+            </label>
+            <a style="display: disable"  id="skipButton" name="skipButton" href="/" ></a>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+            <div class="col-lg-4">
+  
+            </div>
+            <br>
+            <div class="col-lg-4">
+                
+            </div>
+            <br><br>
+            <div class="col-lg-4">
+                <div ng-show="main.message">
+                    <div ng-class="main.alert">
+                        {{ main.message }}
+                    </div>
+                    
+                </div>
+            </div>
+    </div>
+    
+</div>

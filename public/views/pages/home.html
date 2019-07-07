@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-lg-4">
+            <a href="/login" ng-show=main.loginButton><h1 style="text-align:center;">Login?</h1></a>
+        </div>
+        <div  class="col-md-4 col-lg-4">
+                <a href="/register" ng-show=main.loginButton><h1 style="text-align:center;">Register?</h1></a>
+        </div>
+        <div class="col-md-4 col-lg-4">
+            <a ng-click="main.logout()" href="/" ng-show=main.logoutButton><h1 style="text-align:center;">Logout?</h1></a>
+        </div>
+
+    </div>
+</div>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><strong>{{ main.modalHeader }}</strong></h4>
+        </div>
+        <div class="modal-body">
+          <p>{{ main.modalBody }}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+</div>
+

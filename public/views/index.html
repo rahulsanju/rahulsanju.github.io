@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="/">
+	<title>Live Stream App</title>
+	<meta name="viewport" content="width=device-width initial-scale=1">
+	<!--custom style sheets-->
+	<link rel="stylesheet" type="text/css" href="assets/css/regForm.css">
+
+
+	<!--cdn Style Sheets -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../assets/css/animate.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+
+	<!--Bootstrap and jquery JS files-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+	
+	<!--angular JS files -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <!--angular JS Public files-->
+    <script type="text/javascript" src="../app.js"></script>
+	<script type="text/javascript" src="../route.js"></script>
+	
+	<!-- Angular Js Controllers-->
+	<script type="text/javascript" src="controllers/registerController.js"> </script>
+	<script type="text/javascript" src="controllers/mainController.js"> </script>
+
+	
+	<!-- Angular Js Services-->
+	<script type="text/javascript" src="services/registrationServices.js"> </script>
+	<script type="text/javascript" src="services/authenticationServices.js"> </script>
+
+	<!-- Angular Js Directives-->
+	<script type="text/javascript" src="directives/fileModelDirective.js"></script>
+
+    
+    <script>
+        new WOW().init();
+	</script>
+	
+	
+
+</head>
+<body ng-app="userApp" ng-controller="mainCtrl as main" >
+	
+        
+    <div ng-view></div>
+</body>
+</html>
